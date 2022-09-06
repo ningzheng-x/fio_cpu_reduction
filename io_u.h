@@ -12,7 +12,7 @@
 #include <libaio.h>
 #endif
 
-#define IO_BUFFER_FILL_INTERVAL (128)
+#define IO_BUFFER_FILL_INTERVAL (64)
 
 enum {
 	IO_U_F_FREE		= 1 << 0,

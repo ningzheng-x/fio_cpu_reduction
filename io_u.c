@@ -2261,7 +2261,7 @@ void fill_io_buffer(struct thread_data *td, void *buf, unsigned long long min_wr
 		unsigned long long this_write;
 
 		o->io_buffer_filled++;
-		if ((++o->io_buffer_filled) > o->iodepth * IO_BUFFER_FILL_INTERVAL)
+		if (o->io_buffer_filled > o->iodepth * IO_BUFFER_FILL_INTERVAL)
 			o->io_buffer_filled = 0;
 
 		if (o->io_buffer_filled >= o->iodepth)
